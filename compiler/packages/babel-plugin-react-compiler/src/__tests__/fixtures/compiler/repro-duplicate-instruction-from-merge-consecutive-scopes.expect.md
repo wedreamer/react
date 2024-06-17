@@ -31,23 +31,24 @@ import { Stringify } from "shared-runtime";
 function Component(t0) {
   const $ = _c(3);
   const { id } = t0;
-  let t1;
+
+  const t1 = id ? true : false;
+  let t2;
   if ($[0] === Symbol.for("react.memo_cache_sentinel")) {
-    t1 = <Stringify title={undefined} />;
-    $[0] = t1;
+    t2 = <Stringify title={undefined} />;
+    $[0] = t2;
   } else {
-    t1 = $[0];
+    t2 = $[0];
   }
-  const t2 = id ? true : false;
   let t3;
-  if ($[1] !== t2) {
+  if ($[1] !== t1) {
     t3 = (
       <>
-        {t1}
-        <Stringify title={t2} />
+        {t2}
+        <Stringify title={t1} />
       </>
     );
-    $[1] = t2;
+    $[1] = t1;
     $[2] = t3;
   } else {
     t3 = $[2];
